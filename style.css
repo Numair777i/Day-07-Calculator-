@@ -2,6 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --bg-dark: oklch(0.1 0.045 264);
+  --bg: oklch(0.15 0.045 264);
+  --bg-light: oklch(0.2 0.045 264);
+  --text: oklch(0.96 0.09 264);
+  --text-muted: oklch(0.76 0.09 264);
+  --highlight: oklch(0.5 0.09 264);
+  --border: oklch(0.4 0.09 264);
+  --border-muted: oklch(0.3 0.09 264);
+  --primary: oklch(0.76 0.1 264);
+  --secondary: oklch(0.76 0.1 84);
+  --danger: oklch(0.7 0.09 30);
+  --warning: oklch(0.7 0.09 100);
+  --success: oklch(0.7 0.09 160);
+  --info: oklch(0.7 0.09 260);
 }
 
 body{
@@ -9,27 +23,31 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-dark);
 }
 
 .container{
   margin: 10px;
   padding: 10px;
   background-color: grey;
-  border-radius: 10px;
-  height: 530px;
+  border-radius: 16px;
+  height: 540px;
   width: 370px;
-
+  border: solid 1px;
+  border-color: var(--border-muted);
+  background-color: var(--bg);
 }
 
 .screen{
   padding:10px;
-  background-color: black;
+  background-color: white;
   border-radius: 7px;
   font-size: 30px;
-  color: white;
+  color: black;
   width: 330px;
   height: 60px;
   margin: 10px;
+  border: 2px;
 }
 
 .btns{
@@ -37,8 +55,8 @@ body{
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  gap: 16px;
-  margin-top: 10px;
+  gap: 17px;
+  margin-top: 17px;
   padding: 3px;
 }
 
@@ -48,12 +66,23 @@ button{
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  background-color: white;
+  background-color: var(--bg-light);
   text-align: center;
   place-content: center;
   font-size: 30px;
+  color: var(--text);
 }
 
 .equal{
-  background-color: orange;
+  background-color: var(--success);
+  width: 150px;
+  border-radius: 100px;
+}
+
+.clear{
+  background-color: var(--danger);
+}
+
+.del{
+  background-color: var(--info);
 }
